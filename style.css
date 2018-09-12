@@ -1,13 +1,5 @@
-/* * {
-    border: 1px solid;
-} */
-
 html {
     background-color: rgb(9, 194, 178);
-}
-
-header {
-    
 }
 
 h1 {
@@ -20,6 +12,7 @@ h1 {
     font-size: 48px;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 48px;
 }
 
 ol {

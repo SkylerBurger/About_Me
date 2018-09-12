@@ -20,19 +20,26 @@
     <script>
         // Collect username
         var userName = prompt("Welcome to my site, what\'s your name?");
-        console.log("Your name is: " + userName);
+        console.log('Your name is: ' + userName);
+        alert('That\'s a lovely name you\'ve got, ' + userName + '. If you have a moment I\'ve got a few questions for you but they\'re really all about me!');
 
-        // First question, select a more descriptive name for the variable
-        // based on the nature of the question
-        var swimming = prompt("Does Skyler like swimming?");
+        // First question - romCom
+        var romCom = prompt("Does Skyler enjoy romantic comedy films?");
+        romCom = romCom.toLowerCase();
+        console.log('Your answer to the rom-com question is ' + romCom);
 
-        if(swimming === 'yes') {
-            alert('Nice job, swimming IS fun.');
-        } else if (swimming === 'no'){
-            alert('Sorry, wrong answer.');
+        if(romCom === 'no') {
+            alert('You\'re correct! Romantic comedies are kinda meh.');
+        } else if (romCom === 'yes'){
+            alert('Sorry, he\'s just not that into you... I mean them.');
         } else {
-            alert('Please answer "yes" or "no"');
+            alert('Please answer with y/n or yes/no :D');
         }
+
+
+
+
+        
     </script>
 
 </body>

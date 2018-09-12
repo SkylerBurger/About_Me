@@ -1,5 +1,6 @@
 html {
-    background-color: rgb(9, 194, 178);
+    height: 100%;
+    background: linear-gradient(rgb(9, 194, 178), rgb(230, 169, 119));
 }
 
 h1 {
@@ -13,6 +14,8 @@ h1 {
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 48px;
+    color: rgb(195, 144, 101);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
 ol {

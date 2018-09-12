@@ -26,20 +26,30 @@
         // First question - romCom
         var romCom = prompt("Does Skyler enjoy romantic comedy films?");
         romCom = romCom.toLowerCase();
-        console.log('Your answer to the rom-com question is ' + romCom);
+        console.log('Your answer to the rom-com question is: ' + romCom);
 
-        if(romCom === 'no') {
+        if((romCom === 'no') || (romCom === 'n')) {
             alert('You\'re correct! Romantic comedies are kinda meh.');
-        } else if (romCom === 'yes'){
+        } else if ((romCom === 'yes') || (romCom === 'y')){
             alert('Sorry, he\'s just not that into you... I mean them.');
         } else {
             alert('Please answer with y/n or yes/no :D');
         }
 
-
-
-
+        // Second Question - hellraiser
+        var hellraiser = prompt('Would Skyler be happy to discuss the first 8 out of 10 Hellraiser films with you?');
+        hellraiser = hellraiser.toLowerCase();
+        console.log('Your answer to the Hellraiser question is: ' + hellraiser);
         
+        if((hellraiser === 'yes') || (hellraiser ==='y')) {
+            alert('YES! YES! A hundred times YES! They\'re great, though things really start to go downhill quickly after Hellraiser III: Hell on Earth.');
+        } else if((hellraiser === 'no') || (hellraiser === 'n')) {
+            alert('Oh we have such sights to show you! Sorry, that was the wrong answer. Get thee to a DVD player and watch them now!');
+        } else {
+            alert('Please answer with y/n or yes/no. It\'s more fun that way, I swear!');
+        }
+
+
     </script>
 
 </body>

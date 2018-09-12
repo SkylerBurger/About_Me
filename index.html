@@ -17,7 +17,9 @@
         <li>Has Skyler ever visted Montana? : No</li>
     </ol>
 
-    <script>
+    <!-- <script>
+        'use strict';
+        
         var correctAnswers = 0;
         
         // Collect username
@@ -96,20 +98,20 @@
         } else if ((montana === 'yes') || (montana === 'y')) {
             alert('Unfortunately he\'s yet to make it over there. Maybe someday...');
         } else {
-            alert('Well ' + userName + ", there are no more questions left so is there any reason to remind you how to answer these questions?");
+            alert('Well ' + userName + ', there are no more questions left so is there any reason to remind you how to answer these questions?');
         }
-        console.log(correctAnswers + " out of 5 questions correct");
+        console.log(correctAnswers + ' out of 5 questions correct');
 
         // Grand Finale
         if(correctAnswers === 5) {
             alert('Congratulations ' + userName + ", you got all of the questions correct! Are you sure you\'re not secretly Skyler?");
         } else if(correctAnswers > 2) {
-            alert('Not bad, ' + userName + ". I'd tell you to try better next time but this quiz doesn't really matter. You be you!");
+            alert('Not bad, ' + userName + '. You got ' + correctAnswers + ' out of 5 correct. I\'d tell you to try better next time but this quiz doesn\'t really matter. You be you!');
         } else {
-            alert('Who really needs to know these things about a stranger, really? Have a great day, ' + userName + '!');
+            alert(correctAnswers + ' out of 5 isn\'t great, but who really needs to know these things about a stranger, really? Have a great day, ' + userName + '!');
         }
 
-    </script>
+    </script> -->
 
 </body>
 </html>

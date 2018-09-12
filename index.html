@@ -33,7 +33,7 @@
         } else if ((romCom === 'yes') || (romCom === 'y')){
             alert('Sorry, he\'s just not that into you... I mean them.');
         } else {
-            alert('Please answer with y/n or yes/no :D');
+            alert('Please answer with y/n or yes/no, ' + userName + ' :D');
         }
 
         // Second Question - hellraiser
@@ -46,8 +46,36 @@
         } else if((hellraiser === 'no') || (hellraiser === 'n')) {
             alert('Oh we have such sights to show you! Sorry, that was the wrong answer. Get thee to a DVD player and watch them now!');
         } else {
-            alert('Please answer with y/n or yes/no. It\'s more fun that way, I swear!');
+            alert('Please answer with y/n or yes/no, ' + userName + '. It\'s more fun that way, I swear!');
         }
+
+        // Third Question - couch
+        var couch = prompt('Has Skyler ever lived behind a couch?');
+        couch = couch.toLowerCase();
+        console.log('Your answer to the couch question is: ' + couch);
+
+        if((couch ==="yes") || (couch === "y")){
+            alert('You are correct! I wouldn\'t reccommend it though.');
+        } else if((couch === 'no') || (couch === 'n')) {
+            alert('Nope, he\'s lived behind a couch for a spell. Not nearly as hip as living under the stairs like Harry Potter.');
+        } else {
+            alert('Please answer with y/n or yes/no, ' + userName + '. It\'s not that hard, I promise.');
+        }
+
+        // Fourth Question - trumpet
+        var trumpet = prompt('Does Skyler know how to play the trumpet?');
+        trumpet = trumpet.toLowerCase();
+        console.log('Your answer to the trumpet question is: ' + trumpet);
+
+        if((trumpet === 'no') || (trumpet === 'n')) {
+            alert('Correct, he doesn\'t know how to play the trumpet but he did play the trombone and bassoon for a number of years.');
+        } else if((trumpet === 'yes') || (trumpet === 'y')) {
+            alert('Unfortunately playing the trumpet didn\'t seem that appealing. He chose the bassoon instead.');
+        } else {
+            alert('Please answer with y/n or yes/no, ' + userName + '! Do we really need to keep discussing this?');
+        }
+
+        // Fifth Question - montana
 
 
     </script>

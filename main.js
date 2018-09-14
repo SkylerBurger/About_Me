@@ -2,12 +2,16 @@
         
         var correctAnswers = 0;
         
+        //=================
         // Collect username
+        //=================
         var userName = prompt('Welcome to my site, what\'s your name?');
         console.log('Your name is: ' + userName);
         alert('That\'s a lovely name you\'ve got, ' + userName + '. If you have a moment I\'ve got a few questions for you but they\'re really all about me!');
 
+        //========================
         // First question - romCom
+        //========================
         var romCom = prompt("Does Skyler enjoy romantic comedy films?");
         romCom = romCom.toLowerCase();
         console.log('Your answer to the rom-com question is: ' + romCom);
@@ -22,7 +26,9 @@
         }
         console.log(correctAnswers + ' out of 5 questions correct');
 
+        //=============================
         // Second Question - hellraiser
+        //=============================
         var hellraiser = prompt('Would Skyler be happy to discuss the first 8 out of 10 Hellraiser films with you?');
         hellraiser = hellraiser.toLowerCase();
         console.log('Your answer to the Hellraiser question is: ' + hellraiser);
@@ -37,7 +43,9 @@
         }
         console.log(correctAnswers + ' out of 5 questions correct');
 
+        //==========================
         // Third Question - modPodge
+        //==========================
         var modPodge = prompt('Is Mod Podge Skyler\'s favorite craft supply?');
         modPodge = modPodge.toLowerCase();
         console.log('Your answer to the Mod Podge question is: ' + modPodge);
@@ -52,7 +60,9 @@
         }
         console.log(correctAnswers + ' out of 5 questions correct');
 
+        //==========================
         // Fourth Question - trumpet
+        //==========================
         var trumpet = prompt('Does Skyler know how to play the trumpet?');
         trumpet = trumpet.toLowerCase();
         console.log('Your answer to the trumpet question is: ' + trumpet);
@@ -67,7 +77,9 @@
         }
         console.log(correctAnswers + ' out of 5 questions correct');
 
+        //=========================
         // Fifth Question - montana
+        //=========================
         var montana = prompt('Do you think Skyler has ever visited Montana?');
         montana = montana.toLowerCase();
         console.log('Your answer to the Montana question is: ' + montana);
@@ -82,7 +94,53 @@
         }
         console.log(correctAnswers + ' out of 5 questions correct');
 
+        //============================
+        // Sixth Question - favNumGuess
+        //============================
+        var favNumber = 42;
+        var gameOver;
+        var tries =0;
+
+        favNumGuess = prompt('Take a stab at guessing Skyler\'s favorite number. Please respond with an integer. You\'ll have 4 chances to guess the right number before I get bored of this.');
+
+        while(gameOver) {
+            // Checks if guess is correct, alerts if too high or too low
+            var remainingChances = 4 - tries;
+            if(favNumGuess === 42) {
+                alert('You\'re incredible! Of an infinite collection of numbers to select from, you got it! I\;m impressed and spooked.');
+                gameOver = true;
+            } else if (favNumGuess > 42) {
+                tries++;
+                console.log(remainingChances);
+                alert('Your guess was a little high. You have ' + remainingChances + ' out of 4 chances left.');
+            } else if (favNumber < 42) {
+                tries++;
+                console.log(remainingChances);
+                alert('Your guess is a little low. You have ' + remainingChances + ' out of 4 chances left.');
+            } else {
+                tries++;
+                console.log(remainingChances);
+                alert('Did you enter a number? That still counts as a guess unfortunately. You have ' + remainingChances + ' out of 4 chances left.');
+            }
+
+            // If game is still going and all chances are used, too bad
+            // If game is still going and chances remain, prompt again
+            if(!gameOver && tries === 4){
+                alert('Sorry you have used all of your chances, better luck next time.');
+                gameOver = true;
+            } else if (!gameOver){
+                favNumGuess = prompt('Take another guess, what\'s my favorite number?');
+            }
+        }
+
+
+        //===========================================
+        // Seventh Question - *TBA* Multiple Choice Q
+        //===========================================
+
+        //==============
         // Grand Finale
+        //==============
         if(correctAnswers === 5) {
             alert('Congratulations ' + userName + ", you got all of the questions correct! Are you sure you\'re not secretly Skyler?");
         } else if(correctAnswers > 2) {

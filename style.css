@@ -1,6 +1,7 @@
 html {
     height: 100%;
     background: linear-gradient(rgb(9, 194, 178), rgb(230, 169, 119));
+    background-attachment: fixed;
 }
 
 h1 {
@@ -18,7 +19,19 @@ h1 {
     text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
-ol {
+h2 {
+    text-align: center;
+    color: rgb(195, 144, 101);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+h3 {
+    text-align: center;
+    color: rgb(195, 144, 101);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.myLists {
     background-color: rgba(0, 0, 0, 0.116);
     border-radius: 10px;
     padding-top: 20px;

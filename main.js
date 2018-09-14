@@ -24,7 +24,7 @@
         } else {
             alert('Please answer with y/n or yes/no, ' + userName + ' :D');
         }
-        console.log(correctAnswers + ' out of 5 questions correct');
+        console.log(correctAnswers + ' out of 7 questions correct');
 
         //=============================
         // Second Question - hellraiser
@@ -41,7 +41,7 @@
         } else {
             alert('Please answer with y/n or yes/no, ' + userName + '. It\'s more fun that way, I swear!');
         }
-        console.log(correctAnswers + ' out of 5 questions correct');
+        console.log(correctAnswers + ' out of 7 questions correct');
 
         //==========================
         // Third Question - modPodge
@@ -58,7 +58,7 @@
         } else {
             alert('Please answer with y/n or yes/no, ' + userName + '. It\'s not that hard, I promise.');
         }
-        console.log(correctAnswers + ' out of 5 questions correct');
+        console.log(correctAnswers + ' out of 7 questions correct');
 
         //==========================
         // Fourth Question - trumpet
@@ -75,7 +75,7 @@
         } else {
             alert('Please answer with y/n or yes/no, ' + userName + '! Do we really need to keep discussing this?');
         }
-        console.log(correctAnswers + ' out of 5 questions correct');
+        console.log(correctAnswers + ' out of 7 questions correct');
 
         //=========================
         // Fifth Question - montana
@@ -92,34 +92,36 @@
         } else {
             alert('Well ' + userName + ', there are no more questions left so is there any reason to remind you how to answer these questions?');
         }
-        console.log(correctAnswers + ' out of 5 questions correct');
+        console.log(correctAnswers + ' out of 7 questions correct');
 
         //============================
         // Sixth Question - favNumGuess
         //============================
         var favNumber = 42;
-        var gameOver;
-        var tries =0;
+        var gameOver = false;
+        var tries = 0;
 
-        favNumGuess = prompt('Take a stab at guessing Skyler\'s favorite number. Please respond with an integer. You\'ll have 4 chances to guess the right number before I get bored of this.');
+        var favNumGuess = prompt('Take a stab at guessing Skyler\'s favorite number. Please respond with an integer. You\'ll have 4 chances to guess the right number before I get bored of this.');
+        favNumGuess = Number(favNumGuess);
+        console.log('Guess is ' + favNumGuess);
 
-        while(gameOver) {
+        while(!gameOver) {
             // Checks if guess is correct, alerts if too high or too low
+            tries++;
             var remainingChances = 4 - tries;
+            console.log('Entering logic flow');
+
             if(favNumGuess === 42) {
-                alert('You\'re incredible! Of an infinite collection of numbers to select from, you got it! I\;m impressed and spooked.');
+                alert('You\'re incredible! Of an infinite collection of numbers to select from, you got it! I\'m impressed and spooked.');
                 gameOver = true;
             } else if (favNumGuess > 42) {
-                tries++;
-                console.log(remainingChances);
+                console.log('Remaining chances: ' + remainingChances);
                 alert('Your guess was a little high. You have ' + remainingChances + ' out of 4 chances left.');
-            } else if (favNumber < 42) {
-                tries++;
-                console.log(remainingChances);
+            } else if (favNumGuess < 42) {
+                console.log('Remaining chances: ' + remainingChances);
                 alert('Your guess is a little low. You have ' + remainingChances + ' out of 4 chances left.');
             } else {
-                tries++;
-                console.log(remainingChances);
+                console.log('Remaining chances: ' + remainingChances);
                 alert('Did you enter a number? That still counts as a guess unfortunately. You have ' + remainingChances + ' out of 4 chances left.');
             }
 
@@ -130,6 +132,7 @@
                 gameOver = true;
             } else if (!gameOver){
                 favNumGuess = prompt('Take another guess, what\'s my favorite number?');
+                favNumGuess = Number(favNumGuess);
             }
         }
 
@@ -139,12 +142,12 @@
         //===========================================
 
         //==============
-        // Grand Finale
+        // Grand Finale ***Skybur needs to update this to account for added questions
         //==============
-        if(correctAnswers === 5) {
-            alert('Congratulations ' + userName + ", you got all of the questions correct! Are you sure you\'re not secretly Skyler?");
-        } else if(correctAnswers > 2) {
-            alert('Not bad, ' + userName + '. You got ' + correctAnswers + ' out of 5 correct. I\'d tell you to try better next time but this quiz doesn\'t really matter. You be you!');
-        } else {
-            alert(correctAnswers + ' out of 5 isn\'t great, but who really needs to know these things about a stranger, really? Have a great day, ' + userName + '!');
-        }
+        // if(correctAnswers === 5) {
+        //     alert('Congratulations ' + userName + ", you got all of the questions correct! Are you sure you\'re not secretly Skyler?");
+        // } else if(correctAnswers > 2) {
+        //     alert('Not bad, ' + userName + '. You got ' + correctAnswers + ' out of 5 correct. I\'d tell you to try better next time but this quiz doesn\'t really matter. You be you!');
+        // } else {
+        //     alert(correctAnswers + ' out of 5 isn\'t great, but who really needs to know these things about a stranger, really? Have a great day, ' + userName + '!');
+        // }

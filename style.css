@@ -1,15 +1,20 @@
 html {
     height: 100%;
-    background: linear-gradient(rgb(9, 194, 178), rgb(230, 169, 119));
+    background: linear-gradient(rgb(9, 126, 194),rgb(9, 194, 178), rgb(230, 169, 119) 90%, rgb(230, 125, 107));
     background-attachment: fixed;
 }
 
+div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 h1 {
-    min-width: 200px;
-    max-width: 450px;
+    min-width: 400px;
+    max-width: 650px;
     margin: auto;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.116);
+    background-color: rgba(0, 0, 0, 0.144);
     border-radius: 10px;
     font-size: 48px;
     padding-top: 10px;
@@ -32,7 +37,7 @@ h3 {
 }
 
 .myLists {
-    background-color: rgba(0, 0, 0, 0.116);
+    background-color: rgba(0, 0, 0, 0.144);
     border-radius: 10px;
     padding-top: 20px;
     padding-bottom: 20px;

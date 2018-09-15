@@ -1,6 +1,7 @@
 'use strict';
         
 var correctAnswers = 0;
+var tries = 0;
 
 //=================
 // Collect username
@@ -22,7 +23,7 @@ var romCom;
 
 do {
     var romCom = prompt('Does Skyler enjoy romantic comedy films? *Please answer \'yes\' or \'no\'.'); 
-} while (romCom !== 'no' && romCom !== 'yes');
+} while (romCom !== 'no' && romCom !== 'yes' && romCom !== 'n' && romCom !== 'y');
 
 romCom = romCom.toLowerCase();
 console.log('Answer 1: ' + romCom);
@@ -120,7 +121,7 @@ console.log(correctAnswers + ' out of 7 questions correct');
 //===========================
 var favNumber = 42;
 var question6Over = false;
-var tries = 0;
+
 
 var favNumGuess = prompt('Take a stab at guessing Skyler\'s favorite number. Please respond with an integer. You\'ll have 4 chances to guess the right number before I get bored of this.');
 favNumGuess = Number(favNumGuess);
@@ -161,17 +162,40 @@ while(!question6Over) {
 //===========================================
 // Seventh Question - petNames
 //===========================================
-var petNames = ['bubba', 'sebastian', 'KC', 'Duke', 'Midnight', 'Bandit', 'Clark'];
+var petNames = ['bubba', 'sebastian', 'kc', 'duke', 'midnight', 'bandit', 'clark'];
 var question7Over = false;
-tries = 0;
+tries = 6;
+var answerCorrect = false;
 
-var petNameGuess = prompt("Can you guess the name of one of my previous pets? I'll give you a generous 6 chances to guess one correctly.");
-petNameGuess = petNameGuess.toLowerCase();
-console.log('Guess is ' + petNameGuess);
 
-// THE LOGIC FLOW FOR THIS IS GOING TO BE DIFFERENT THAN QUESTION 6
-// FIND A WAY TO TRAVERSE AN ARRAY AND CHECK IF STATEMENTS AT THE SAME TIME
+do {
+    var petNameGuess = prompt('Can you guess the name of one of my previous pets? You have ' + tries + ' remaining');
+        petNameGuess = petNameGuess.toLowerCase();
+        console.log('Guess is ' + petNameGuess);
 
+    for (var i=0; i < petNames.length; i++) {
+        console.log('pet names ' + petNames[i]);
+        if(petNameGuess === petNames[i]) {
+            answerCorrect = true;
+        }
+    }
+        
+    
+    if(answerCorrect) {
+        console.log(answerCorrect);
+        alert('You got it right');
+        correctAnswers++;
+        break;
+    } else if (petNameGuess) {
+        console.log(answerCorrect);
+        alert('Sorry wrong answer');
+        tries--;
+        alert('You have ' + tries + ' left');
+        //break;
+        console.log(petNameGuess + ' is not ' + petNames[i]);
+    }
+
+} while (!answerCorrect && tries > 0);
 
 //==============
 // Grand Finale

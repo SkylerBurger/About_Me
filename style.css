@@ -1,6 +1,6 @@
 html {
     height: 100%;
-    background: linear-gradient(rgb(9, 126, 194),rgb(9, 194, 178), rgb(230, 169, 119) 90%, rgb(230, 125, 107));
+    background: linear-gradient(178deg, rgb(9, 126, 194) 5%,rgb(9, 194, 178), rgb(230, 169, 119) 90%, rgb(230, 125, 107));
     background-attachment: fixed;
 }
 

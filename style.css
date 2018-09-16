@@ -9,6 +9,13 @@ div {
     margin-bottom: 20px;
 }
 
+header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    /* border: 1px black solid; */
+}
+
 h1 {
     min-width: 400px;
     max-width: 650px;
@@ -54,4 +61,23 @@ li {
 
 #hellraiser {
     margin-left: 110px;
+}
+
+#headshot {
+    max-width: 300px;
+    min width: 150px;
+    max-height: 300px;
+    min-height: 150px;
+    margin: 20px auto 0px auto;
+    border-radius: 50%;
+}
+
+/* Used image swap solution proposed on StackOverflow by user Vucko 
+on this thread: https://stackoverflow.com/questions/18813299/changing-image-on-hover-with-css-html */
+#headshot:hover {
+    content: url(img/Avatar.png);
+    max-width: 300px;
+    min width: 150px;
+    max-height: 300px;
+    min-height: 150px;
 }

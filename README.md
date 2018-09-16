@@ -1,5 +1,4 @@
 # About_Me
-About Skyler
 
 This is a fairly basic site with some information about myself and a little guessing game.
 

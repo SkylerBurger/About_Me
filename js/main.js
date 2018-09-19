@@ -50,7 +50,7 @@ var question_2 = function() {
     var hellraiser;
 
     do {
-        hellraiser = prompt('Have I seen the first 8 out of 10 Hellraiser films with you? *Please answer \'yes\' or \'no\'.');
+        hellraiser = prompt('Have I seen the first 8 out of 10 Hellraiser films? *Please answer \'yes\' or \'no\'.');
     } while(hellraiser !== 'no' && hellraiser !== 'yes' && hellraiser !== 'n' && hellraiser !== 'y');
     hellraiser = hellraiser.toLowerCase();
     console.log('Answer 2: ' + hellraiser);
@@ -79,10 +79,10 @@ var question_3 = function() {
     console.log('Answer 3: ' + modPodge);
     
     if(modPodge === "yes" || modPodge === 'y') {
-        alert('You are correct! It\'s the crafting supply of the Gods!');
+        alert('You are correct! It\'s the glue of the Gods!');
         correctAnswers++;
     } else {
-        alert('You must be using an inferior adhesive/sealing material. It\'s simply the best!');
+        alert('You must be using an inferior adhesive/sealing solution. It\'s simply the best!');
     }
     console.log(correctAnswers + ' out of 7 questions correct');
 }
@@ -212,9 +212,11 @@ var question_7 = function() {
             console.log(answerCorrect);
             alert('That\'s a pretty cool name but not one I\'ve given to a pet of mine.');
             tries--;
-            alert('You have ' + tries + ' chances remaining. I believe in you!');
-            //break;
             console.log(petNameGuess + ' is not ' + petNames[i]);
+        }
+
+        if (tries === 0) {
+            alert('Sorry, you\'ve used up all of your chances. Did you at least have fun guessing?');
         }
     
     } while (!answerCorrect && tries > 0);

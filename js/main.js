@@ -169,7 +169,7 @@ var question_6 = function() {
     
         // If game is still going and all chances are used, too bad
         // If game is still going, prompt again
-        if(!question6Over && tries === 4){
+        if(!question6Over && tries === 0){
             alert('Sorry you have used all of your chances, better luck next time.');
             question6Over = true;
         } else if (!question6Over){

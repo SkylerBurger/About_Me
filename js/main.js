@@ -3,6 +3,22 @@
 var correctAnswers = 0;
 var tries = 0;
 
+//==========================
+// Do You Wanna Play A Game?
+//==========================
+var wannaPlay = function() {
+    var gameConsent;
+    do {
+        gameConsent = prompt('Would you like to play my quiz? This is you last chance to exit. Please answer \'yes\' or \'no\'.');
+    } while (gameConsent !== 'no' && gameConsent !== 'yes' &&& gameConsent !== 'n' && gameConsent !== 'y')
+    
+    if (gameConsent === 'y' || gameConsent === "yes") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 //=================
 // Collect username
 //=================
@@ -229,24 +245,29 @@ var question_7 = function() {
 //===============
 
 var beginGame = function() {
-    var userName = gatherUsername();
-    question_1();
-    question_2();
-    question_3();
-    question_4();
-    question_5();
-    question_6();
-    question_7();
+    var consent = wannaPlay();
+    if (consent){
+        var userName = gatherUsername();
+        question_1();
+        question_2();
+        question_3();
+        question_4();
+        question_5();
+        question_6();
+        question_7();
 
-    if(correctAnswers === 7) {
-        alert('Congratulations ' + userName + ', you got all of the questions correct! Are you sure you\'re not secretly Skyler?');
-    } else if(correctAnswers > 3) {
-        alert('Not bad, ' + userName + '. You got ' + correctAnswers + ' out of 7 correct. I\'d tell you to try better next time but this quiz doesn\'t really matter. You be you!');
+        if(correctAnswers === 7) {
+            alert('Congratulations ' + userName + ', you got all of the questions correct! Are you sure you\'re not secretly Skyler?');
+        } else if(correctAnswers > 3) {
+            alert('Not bad, ' + userName + '. You got ' + correctAnswers + ' out of 7 correct. I\'d tell you to try better next time but this quiz doesn\'t really matter. You be you!');
+        } else {
+            alert(correctAnswers + ' out of 7 isn\'t great, but who really needs to know these things about a stranger, really? Have a great day, ' + userName + '!');
+        }
+
+        // Reset the score in case they want to play again
+        // without refreshing the page.
+        correctAnswers = 0;
     } else {
-        alert(correctAnswers + ' out of 7 isn\'t great, but who really needs to know these things about a stranger, really? Have a great day, ' + userName + '!');
+        alert('No worry. Who has time for games anyhow?');
     }
-
-    // Reset the score in case they want to play again
-    // without refreshing the page.
-    correctAnswers = 0;
 }

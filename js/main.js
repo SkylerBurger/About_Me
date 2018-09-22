@@ -10,7 +10,7 @@ var wannaPlay = function() {
     var gameConsent;
     do {
         gameConsent = prompt('Would you like to play my quiz? This is you last chance to exit. Please answer \'yes\' or \'no\'.');
-    } while (gameConsent !== 'no' && gameConsent !== 'yes' &&& gameConsent !== 'n' && gameConsent !== 'y')
+    } while (gameConsent !== 'no' && gameConsent !== 'yes' && gameConsent !== 'n' && gameConsent !== 'y')
     
     if (gameConsent === 'y' || gameConsent === "yes") {
         return true;
